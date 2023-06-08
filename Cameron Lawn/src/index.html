@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/common.js" type="module"></script>
+    <link rel="stylesheet" href="css/common.css" />
+
+    <!-- Choose the FontAwesome library you want to use from the list below. Comment-out the others -->
+
+    <script defer src="fontawesome/js/brands.js"></script>
+    <script defer src="fontawesome/js/duotone.js"></script>
+    <script defer src="fontawesome/js/light.js"></script>
+    <script defer src="fontawesome/js/regular.js"></script>
+    <script defer src="fontawesome/js/sharp-regular.js"></script>
+    <script defer src="fontawesome/js/sharp-solid.js"></script>
+    <script defer src="fontawesome/js/solid.js"></script>
+    <script defer src="fontawesome/js/thin.js"></script>
+
+    <!-- Keep the FontAwesome file below. -->
+
+    <script defer src="fontawesome/js/fontawesome.js"></script>
+
+    <title>Template</title>
+    <style>
+      :root {
+        --colorDarkYellow: #97832e;
+        --colorYellow: #d6ba41;
+        --colorGray: #73748c;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      @font-face {
+        font-family: "RobotoFlex";
+        src: url("fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf")
+          format("truetype");
+      }
+
+      @font-face {
+        font-family: "RobotoMono";
+        src: url("fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf")
+          format("truetype");
+      }
+
+      @font-face {
+        font-family: "Montserrat";
+        src: url("fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+          format("truetype");
+      }
+
+      .landingPage {
+        width: var(--fullWidth);
+        height: var(--fullHeight);
+
+        display: grid;
+        grid-template-columns: 20% 1fr 20%;
+        grid-template-rows: 1fr 60px;
+        align-items: center;
+        justify-items: center;
+        font-family: Montserrat;
+        font-size: 50px;
+        color: #808080;
+        box-sizing: border-box;
+        background-image: url("img/house.jpg");
+        background-position: center center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.3);
+        background-blend-mode: multiply;
+      }
+
+      .boxes {
+        height: 100%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        font-size: 1.5vw;
+      }
+
+      .box {
+        height: 200px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-items: center;
+        border-radius: 10px;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        opacity: 0.85;
+      }
+
+      .services {
+        grid-row: 1;
+        grid-column: 1;
+      }
+
+      .service {
+        background-color: var(--colorYellow);
+        color: #404040;
+      }
+
+      .details {
+        grid-row: 1;
+        grid-column: 3;
+      }
+      .detail {
+        background-color: var(--colorYellow);
+        color: #404040;
+      }
+      .main {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        font-size: 60px;
+        color: #ffd07f;
+        color: var(--colorDarkYellowLightened);
+      }
+
+      .logo {
+        width: 100%;
+        height: 100%;
+        grid-row: 2;
+        grid-column: 1/4;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-items: center;
+        font-size: 1.5vw;
+        font-weight: 300;
+        background-color: var(--colorYellow);
+        opacity: 1;
+        color: #404040;
+        width: 100%;
+        justify-items: center;
+        font-family: Montserrat;
+        font-weight: 300;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="landingPage">
+      <div class="services boxes">
+        <div class="service box">
+          <div>
+            <div style="font-size: 1.8vw">Mowing</div>
+            <div style="font-size: 1.8vw">Weeding</div>
+          </div>
+        </div>
+        <!-- <div class="service">Milton-Freewater</div>
+        <div class="service">Oregon</div> -->
+      </div>
+      <div class="details boxes">
+        <div class="detail box">
+          <div>
+            <div style="font-size: 2.2vw">509-386-9562</div>
+            <div style="font-size: 0.9vw">cameronshannon1516@gmail.com</div>
+          </div>
+        </div>
+        <div class="detail box">
+          <div>
+            <div style="font-size: 36px">$50 per lawn</div>
+            <div style="font-size: 20px">(under 1 hour)</div>
+            <div style="margin-top: 20px; font-size: 24px">
+              $50 per hour overage
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="logo">
+        <div>CS Lawn Care</div>
+      </div>
+    </div>
+
+    <script type="module">
+      import { setWidthHeight } from "./js/common.js";
+      window.onload = function () {
+        setWidthHeight();
+        window.addEventListener("resize", () => {
+          setWidthHeight();
+        });
+      };
+    </script>
+  </body>
+</html>
